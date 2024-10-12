@@ -1,0 +1,28 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <section id="home">
+        <h1>Welcome to JLA Pet Supplies</h1>
+        <p>
+            Hi there! My name is Louise, and this store is inspired by my love <br>
+            for my three wonderful cats, Happy, Hollie, and Hero. <br>
+            They’ve been my constant companions and have shown me just how important <br>
+            it is to provide the best care for our furry family members.
+        </p>
+        
+        <div class="cat-inspiration">
+            <img src="{% static 'images/julian.png' %}" alt="Happy, Hollie, and Hero the Cats" class="inspiration-photo">
+            <center><p><em> Meet Happy, Hollie, and Hero, my inspiration! </em></p></center>
+        </div>
+        
+        <h2>Why You Can Trust Us?</h2>
+        <ul>
+            <li>We're pet lovers just like you!</li>
+            <li>Hand-picked, high-quality products for your pets’ well-being</li>
+            <li>Dedicated customer service because we care about your pet's happiness</li>
+        </ul>
+    </section>
+</div>
+{% endblock content %}

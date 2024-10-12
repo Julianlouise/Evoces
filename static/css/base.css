@@ -1,0 +1,239 @@
+body {
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure body takes full height */
+    background-color: #badfe7; /* Change to your desired background color */
+    display: flex;
+    overflow: hidden; /* Prevents scrolling */
+
+}
+
+
+h1 {
+    color: rgb(17, 18, 18);
+}
+
+.image {
+    height: 200px;
+    width: 200px;
+    margin-left: 30%;
+    object-fit: cover; /* Ensures the image is not distorted */
+}
+
+ul {
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+    border-top: 1px solid #c2edce;
+    border-bottom: 1px solid #c2edce;
+    transition: background 0.3s ease; /* Smooth transition for hover */
+}
+
+li:hover {
+    background: #4892ed;
+    cursor: pointer; /* Adds a pointer to make it interactive */
+}
+
+.navigator {
+    font-family: display fonts;
+    font: pacifico;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    margin-left: 20px;
+    color: #c2edce; /* Ensures link inherits the color from parent */
+}
+
+.wrap {
+    display: flex;
+}
+
+.wrap .title {
+    position: fixed;
+    width: 250px;
+    background-color: #388087;
+    padding: 30px 0;
+
+    height: 100vh; /* Ensures the sidebar fills the entire height */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    z-index: 10; /* Ensure navbar stays above other content */
+}
+
+.wrap .title h2 {
+    color: #f6f6f2;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .image {
+        margin-left: 0; /* For smaller screens, center the image */
+        margin: 0 auto;
+    }
+
+    .wrap .title {
+        width: 100%; /* For smaller screens, make the title full width */
+        position: relative;
+    }
+}
+
+.content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center child elements horizontally */
+    align-items: center; /* Center child elements vertically */
+    flex-direction: column;
+    text-align: center; /* Center text within the section */
+    margin-left: 450px; /* Add margin around the content */
+    height: calc(100vh - 40px); /* Full height minus navbar height (if needed) */
+}
+
+/* Home Section Styling */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+    min-height: 100vh; /* Full height */
+    padding: 40px;
+    color: #333;
+}
+
+/* Heading Styles */
+#home h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #388087; /* Matching the theme */
+}
+
+/* Paragraph Styles */
+#home p {
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-bottom: 8px;
+}
+
+/* Cat Inspiration Section */
+.cat-inspiration {
+    display: grid;
+    grid-template-columns: 1fr; /* One image per row */
+    justify-content: center; /* Center the grid within the container */
+    width: 20vw; /* Adjust the overall width for a balanced look */
+    margin-left: 200px; /* Center the grid horizontally and add space */
+}
+
+/* Cat Photo Styling */
+.cat-inspiration img {
+    width: 10vw;   /* Make the image take the full width of the grid cell */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding subtle shadow */
+    margin-bottom: 10px; /* Add space between image and text */
+
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1em;
+    margin: 0;
+    color: #555;
+}
+
+/* Button Styles (if needed for future use) */
+.button {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #388087;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #66a5ad;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #home {
+        padding: 20px;
+    }
+
+    .cat-inspiration img {
+        width: 150px; /* Adjusting image size for smaller screens */
+    }
+}
+
+/* Collage Container */
+.photo-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three images per row */
+    grid-gap: 10px; /* Space between images */
+    width: 60vw; /* Ensure it fits in the viewport width */
+    height: 40vh; /* Set height to allow only two rows */
+    margin-left: 430px; /* Adjust as needed to center the collage */
+    margin-top: 50px; /* Add this line to move the collage down */
+}
+
+/* Images inside the collage */
+.photo-collage img {
+    width: 100%; /* Make sure the images fit in their grid cell */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Set maximum height for portrait images */
+    object-fit: cover; /* Ensure images fit within the grid without distortion */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .photo-collage {
+        grid-template-columns: repeat(3, 1fr); /* Maintain three images per row */
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+
+    .photo-collage img {
+        max-height: 200px; /* Limit height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-collage {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 images per row */
+        height: 40vh; /* Further adjust height for very small screens */
+    }
+
+    .photo-collage img {
+        max-height: 150px; /* Smaller maximum height on mobile */
+    }
+}
+.rectangle{
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center child elements horizontally */
+    align-items: center; /* Center child elements vertically */
+    flex-direction: column;
+    text-align: center; /* Center text within the section */
+    margin-left: 50px; /* Add margin around the content */
+    height: calc(100vh - 40px); /* Full height minus navbar height (if needed) */
+}
+#about-us {
+    max-width: 600px; /* Set a maximum width for the About Me section */
+    margin: 520px; /* Add margin around the section */
+    padding: 30px; /* Add padding inside the section */
+    background-color: #fff; /* Background color for the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    
+}
